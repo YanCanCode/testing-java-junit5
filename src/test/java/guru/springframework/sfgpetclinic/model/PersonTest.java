@@ -14,8 +14,8 @@ class PersonTest {
 
         //then
         assertAll("Test properties set",
-                () -> assertEquals(person.getFirstName(), "Steve"),
-                () -> assertEquals(person.getLastName(), "Stevenson"));
+                () -> assertEquals("Steve",person.getFirstName()),
+                () -> assertEquals("Stevenson", person.getLastName()));
     }
 
     @Test
@@ -31,7 +31,7 @@ class PersonTest {
 
         //then
         assertAll("Test properties set",
-                () -> assertEquals(person.getFirstName(), "Steve", "First name failed."),
-                () -> assertEquals(person.getLastName(), "Stevenson", "Last name failed."));
+                () -> assertEquals("Steve", person.getFirstName(),  "First name failed."),
+                () -> assertEquals("Stevenson", person.getLastName(),  "Last name failed."));
     }
 }
